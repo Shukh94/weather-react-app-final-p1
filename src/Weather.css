@@ -31,10 +31,16 @@
   padding-bottom: 30px;
 }
 
-.Weather img {
+.WeatherIcon {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.Weather canvas {
   width: 100px;
   height: 100px;
   margin: 0;
+  margin-left: 0;
 }
 
 .Weather .search-input {
