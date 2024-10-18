@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultCity="Dhaka" />
       <div>
         <footer>
           This project was coded by{" "}
