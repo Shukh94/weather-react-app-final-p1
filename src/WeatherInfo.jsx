@@ -5,9 +5,7 @@ function WeatherInfo() {
     <div className="weather-info">
       <h1>San Fransisco</h1>
       <ul>
-        <li>
-          <Date></Date>
-        </li>
+        <li>Date</li>
         <li className="text-capitalize">Description</li>
       </ul>
     </div>

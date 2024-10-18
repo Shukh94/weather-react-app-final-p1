@@ -1,13 +1,16 @@
 .Weather {
-  font-family: "Cerebri-Sans", Helvetica, Arial, sans-serif;
-  background: white;
+  /* font-family: "Cerebri-Sans", Helvetica, Arial, sans-serif; */
+  border: 1px solid;
+  max-width: 700px;
+  margin: 0 auto;
+  /* background: white;
   border-radius: 16px;
   box-shadow: 0px 30px 50px rgba(65, 50, 100, 0.08);
   padding: 40px;
-  color: rgb(135, 135, 135);
+  color: rgb(135, 135, 135); */
 }
 
-.Weather .logo {
+/* .Weather .logo {
   max-width: 150px;
   display: block;
 }
@@ -108,4 +111,4 @@
 
 .Weather footer a {
   color: #885df1;
-}
+} */
