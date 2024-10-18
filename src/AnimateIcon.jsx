@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import ReactAnimatedWeather from "./ReactAnimatedWeather";
+import ReactAnimatedWeather from "react-animated-weather";
 
 function AnimateIcon(props) {
   // console.log(props.data)
@@ -26,7 +26,12 @@ function AnimateIcon(props) {
   // };
 
   return (
-    <ReactAnimatedWeather icon="CLEAR_NIGHT" color="black" size={100} animate={true} />
+    <ReactAnimatedWeather
+      icon="CLEAR_NIGHT"
+      color="black"
+      size={100}
+      animate={true}
+    />
   );
 }
 
