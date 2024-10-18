@@ -5,15 +5,26 @@ import axios from "axios";
 // import WeatherForecas from "./WeatherForecas";
 
 function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  // const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      description: response.data.weather[0].description,
+      date: "Friday  8:50PM",
+      feels: response.data.main.feels_like,
+      maxTemp: response.data.main.temp_max,
+      minTemp: response.data.main.temp_min,
+    });
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form action="">
@@ -35,26 +46,36 @@ function Weather() {
             </div>
           </div>
         </form>
-        <h1>New York</h1>
-        <ul>
-          <li>Friday 3:00AM</li>
-          <li>Clear</li>
+        <h1>{weatherData.city}</h1>
+        <ul className="info-left">
+          <li>{weatherData.date}</li>
+          <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
           <div className="col-6 weather-info">
             <img
-              src="	https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt=""
+              src={weatherData.iconUrl}
+              alt={weatherData.description}
               className="float-left"
             />
-            <span className="temperature">{temperature}</span>
-            <span className="unit">°C</span>
+            <span className="temperature">
+              {Math.round(weatherData.temperature)}
+              <span className="unit">°C</span>
+            </span>{" "}
           </div>
           <div className="col-6">
-            <ul>
-              <li>Precipitation: 1%</li>
-              <li>Humidity: 57%</li>
-              <li>Wind: 3 km/h</li>
+            <ul className="info-right">
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind} km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6 other-info">
+            <ul className="other-info">
+              <li>Feels Like: {weatherData.feels}°C</li>
+              <li>max: {weatherData.maxTemp}°C</li>
+              <li>Min: {weatherData.minTemp}°C</li>
             </ul>
           </div>
         </div>
