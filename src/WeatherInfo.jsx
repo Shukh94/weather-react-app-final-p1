@@ -25,7 +25,7 @@ function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-6 other-info">
           <ul className="other-info">
             <li>Feels Like: {props.data.feels}°C</li>
@@ -33,7 +33,7 @@ function WeatherInfo(props) {
             <li>Min: {props.data.minTemp}°C</li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
