@@ -37,8 +37,8 @@
 }
 
 .Weather canvas {
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   margin: 0;
   margin-left: 0;
 }
@@ -117,28 +117,10 @@
   font-weight: normal;
 }
 
-.Weather .temperature {
-  font-weight: bold;
-  color: rgb(33, 33, 33);
-  font-weight: 400;
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 1;
-}
+
 
 .Weather canvas {
   margin: 10px 0;
-}
-
-.Weather .unit {
-  color: rgb(33, 33, 33);
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: normal;
-  position: relative;
-  line-height: 1;
-  top: -38px;
 }
 
 .Weather footer {
