@@ -14,7 +14,7 @@ function WeatherInfo(props) {
       </ul>
       <div className="row">
         <div className="col-6 weather-info">
-          <AnimateIcon data={props.data.icon} />
+          <AnimateIcon code={props.data.icon} />
           {/* <img src={props.data.icon} alt={props.data.description} /> */}
           <span className="temperature">
             {Math.round(props.data.temperature)}
